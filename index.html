@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KEI DESIGN｜徳島のホームページ制作 — 押される設計のWebサイト</title>
+<meta name="description" content="徳島市川内町のホームページ制作「KEI DESIGN」。きれいに見せるだけでなく、電話・LINE・購入など、お客さんの次の行動が増えるホームページをつくります。1ページサイト19,800円〜、更新代行 月1,980円。">
+<meta name="theme-color" content="#0D3B66">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KEI DESIGN｜徳島のホームページ制作">
+<meta property="og:description" content="「きれい」より「押される」。お客さんの次の行動を設計するホームページ制作。">
+<meta property="og:image" content="img/ogp.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Jost:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"KEI DESIGN","description":"ホームページ制作・更新代行","founder":{"@type":"Person","name":"増田 圭亮"},"address":{"@type":"PostalAddress","addressRegion":"徳島県","addressLocality":"徳島市","streetAddress":"川内町"},"areaServed":"徳島県","priceRange":"¥19,800〜"}
+</script>
+<style>
+:root{
+  --ink:#0F2440; --ink-2:#2A3B52; --paper:#F4F6FA; --white:#FFFFFF; --navy:#0D3B66; --navy-d:#0A2F52; --sky:#7EC8F8;
+  --line:#D6DDE8; --muted:#55627A; --accent:#2E7BCF; --accent-ink:#1F5FA8;
+  --line-green:#078A43; --line-green-d:#056B34;
+  --en:"Jost","Zen Kaku Gothic New",sans-serif;
+  --sans:"Zen Kaku Gothic New",system-ui,-apple-system,"Hiragino Sans",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1120px; --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.85;letter-spacing:.02em;font-feature-settings:"palt" 1}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:8px 12px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ---------- header ---------- */
+.hd{position:sticky;top:0;z-index:20;background:rgba(244,246,250,.9);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.hd.is-scrolled{border-color:var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .mark{width:auto;height:30px;flex:none}
+.brand b{font-family:var(--en);font-weight:500;font-size:19px;letter-spacing:.14em;white-space:nowrap;color:var(--navy);line-height:1.1;display:block}
+.brand small{display:block;font-family:var(--en);font-size:8.5px;color:var(--muted);line-height:1;margin-top:4px;letter-spacing:.26em}
+.nav{display:flex;gap:26px;font-size:14px}
+.nav a{text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--accent-ink)}
+
+/* ---------- buttons ---------- */
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--line-green);color:#fff;text-decoration:none;font-weight:700;letter-spacing:.04em;transition:background .15s,transform .15s;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.btn-line:hover{background:var(--line-green-d)}
+.btn-line:active{transform:translateY(1px)}
+.btn-line svg{width:22px;height:22px;flex:none}
+.btn-line.lg{min-height:60px;padding:0 32px;font-size:17px}
+.hd .btn-line{min-height:44px;font-size:14px;padding:0 18px}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 88px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:56px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--muted)}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.hero h1{font-size:clamp(26px,7.2vw,48px);line-height:1.32;font-weight:900;margin:18px 0 22px;letter-spacing:.01em}
+.hero h1 .strike{position:relative;color:var(--muted);font-weight:700}
+.hero h1 .strike::after{content:"";position:absolute;left:-2%;right:-2%;top:54%;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;animation:strike .7s .5s cubic-bezier(.6,0,.2,1) forwards}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 68%,rgba(46,123,207,.22) 68%)}
+.nw{white-space:nowrap}
+@keyframes strike{to{transform:scaleX(1)}}
+.lead{font-size:17px;color:var(--ink-2);max-width:32em;margin:0 0 32px}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.hero-cta p{margin:0;font-size:13px;color:var(--muted)}
+
+/* phone mock with annotations */
+.demo{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;justify-self:center;width:100%;max-width:440px}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.legend li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.legend i{font-style:normal;font:500 11px/24px var(--mono);width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;text-align:center}
+.legend b{display:block;font-size:15px;color:var(--ink)}
+.phone{position:relative;margin:0;width:100%;aspect-ratio:9/18.5;background:var(--white);border:10px solid var(--navy);border-radius:38px;box-shadow:0 30px 60px -30px rgba(22,25,29,.45);overflow:hidden}
+.phone .scr{position:absolute;inset:0;padding:22px 16px 16px;display:flex;flex-direction:column;gap:10px}
+.sk{background:#E9EEF5;border-radius:5px}
+.sk.t1{height:12px;width:46%}
+.sk.h{height:22px;width:88%;background:#CBD6E4}
+.sk.h2{height:22px;width:62%;background:#CBD6E4}
+.sk.p{height:8px;width:100%}.sk.p.s{width:74%}
+.sk.img{height:96px;border-radius:10px;margin-top:4px}
+.phone .cta{position:absolute;left:14px;right:14px;bottom:16px;height:42px;border-radius:999px;background:var(--line-green);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;letter-spacing:.05em}
+.phone .cta::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:0 0 0 0 rgba(7,138,67,.45);animation:ripple 3.2s 1.9s infinite}
+@keyframes ripple{0%,58%{box-shadow:0 0 0 0 rgba(7,138,67,.5)}80%,100%{box-shadow:0 0 0 18px rgba(7,138,67,0)}}
+.cursor{position:absolute;width:26px;height:26px;left:62%;top:40%;animation:tap 3.2s 1s infinite;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25))}
+@keyframes tap{0%{left:62%;top:40%;transform:scale(1)}45%{left:52%;top:89%;transform:scale(1)}55%{left:52%;top:89%;transform:scale(.82)}62%{left:52%;top:89%;transform:scale(1)}100%{left:62%;top:40%}}
+.dot{position:absolute;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font:500 10px/20px var(--mono);text-align:center;z-index:2}
+.d1{right:10px;top:48px}.d2{right:10px;top:150px}.d3{right:6px;bottom:27px}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-hd{margin-bottom:48px}
+.sec-hd .mono{color:var(--accent-ink)}
+.sec-hd h2{font-size:clamp(26px,3.6vw,38px);line-height:1.45;font-weight:900;margin:10px 0 0}
+.sec-hd p{color:var(--muted);margin:14px 0 0;max-width:36em}
+.dark{background:var(--navy);color:var(--paper)}
+.dark .sec-hd .mono{color:var(--sky)}
+.dark .sec-hd p{color:#C9D6E6}
+
+/* approach */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,.16)}
+.steps3 article{padding:32px 28px 8px 0}
+.steps3 article+article{padding-left:28px;border-left:1px solid rgba(255,255,255,.16)}
+.steps3 .num{font-family:var(--mono);font-size:13px;color:var(--sky)}
+.steps3 h3{font-size:20px;line-height:1.5;margin:10px 0 12px}
+.steps3 p{margin:0;color:#C9D6E6;font-size:15px}
+.code{margin-top:56px;border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:20px 22px;font-family:var(--mono);font-size:13px;line-height:1.9;color:#C9D6E6;overflow-x:auto;white-space:pre}
+.code .c{color:#8FA6C2}.code .k{color:var(--sky)}.code .s{color:#BDE6FF}
+
+/* works */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:20px;padding:36px}
+.mini{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#F5F3EE;box-shadow:0 20px 40px -28px rgba(20,33,61,.5)}
+.mini .bar{height:26px;background:#E2DED4;display:flex;align-items:center;gap:6px;padding:0 10px}
+.mini .bar span{width:8px;height:8px;border-radius:50%;background:#C9C4B8}
+.mini .mh{background:#14213D;color:#fff;padding:28px 22px 26px}
+.mini .mh small{font-size:10px;color:#F2B705;letter-spacing:.08em}
+.mini .mh strong{display:block;font-size:22px;line-height:1.4;margin:6px 0 14px}
+.mini .tel{display:inline-block;background:#F2B705;color:#14213D;font:700 12px/1 var(--sans);padding:9px 14px;border-radius:999px}
+.mini .mb{padding:16px 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mini .mb div{height:46px;border-radius:6px;background:#fff;border:1px solid #E2DED4}
+.work .tag{display:inline-block;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 12px;color:var(--muted);margin:0 6px 6px 0}
+.work h3{font-size:22px;margin:8px 0 12px;line-height:1.5}
+.work dl{margin:20px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:15px}
+.work dt{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent-ink);padding-top:4px}
+.work dd{margin:0}
+
+/* price */
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.price{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column}
+.price.main{border:2px solid var(--ink)}
+.price h3{font-size:18px;margin:0}
+.price .amt{font-size:44px;font-weight:900;letter-spacing:.01em;line-height:1.2;margin:14px 0 4px}
+.price .amt small{font-size:16px;font-weight:700;margin-left:4px}
+.price .sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+.price ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.price li{padding:12px 0 12px 28px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+.price li::before{content:"";position:absolute;left:4px;top:20px;width:12px;height:7px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.price-note{font-size:13px;color:var(--muted);margin-top:18px}
+.ph{background:#FFF1C2;padding:0 4px;border-radius:3px}
+
+/* profile */
+.profile{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+.profile figure{margin:0;position:relative}
+.profile img{border-radius:20px;aspect-ratio:4/5;height:auto;object-position:50% 20%;object-fit:cover;width:100%}
+.profile figcaption{margin-top:14px;font-size:13px;color:var(--muted)}
+.profile blockquote{margin:0 0 24px;font-size:clamp(22px,2.8vw,30px);font-weight:900;line-height:1.6}
+.profile p{margin:0 0 18px;color:var(--ink-2)}
+.sign{margin-top:28px;display:flex;align-items:baseline;gap:14px}
+.sign b{font-size:22px;letter-spacing:.12em}
+.sign span{font-size:13px;color:var(--muted)}
+
+/* flow */
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:f}
+.flow li{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 18px;position:relative}
+.flow .mono{color:var(--accent-ink)}
+.flow h3{font-size:17px;margin:6px 0 8px}
+.flow p{margin:0;font-size:14px;color:var(--muted);line-height:1.75}
+
+/* faq */
+.faq{max-width:780px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:10px;height:10px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq details p{margin:0 0 22px;color:var(--ink-2)}
+
+/* contact */
+.contact{text-align:center;padding:104px 0}
+.contact h2{font-size:clamp(28px,4.4vw,46px);line-height:1.45;font-weight:900;margin:12px 0 18px}
+.contact p{color:#C9D6E6;margin:0 0 34px}
+.contact .meta{margin-top:30px;font-size:13px;color:#A9BCD3}
+
+footer{background:var(--navy-d);color:#A9BCD3;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
+
+
+/* stats */
+.stats{display:flex;gap:0;margin:28px 0 0;padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:520px}
+.stats div{flex:1;padding:14px 0 12px 16px}
+.stats div:first-child{padding-left:0}
+.stats div+div{border-left:1px solid var(--line)}
+.stats dt{font-size:12px;color:var(--muted)}
+.stats dd{margin:0;font-size:28px;font-weight:900;line-height:1.3;letter-spacing:.01em}
+.stats dd small{font-size:13px;font-weight:700;margin-left:2px}
+.stats sup{font-size:10px;color:var(--muted);margin-left:2px}
+.stats-note{font-size:11.5px;color:var(--muted);margin:8px 0 0}
+/* worry */
+.worries{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.worries li{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px 20px 58px;position:relative;font-size:16px;line-height:1.7}
+.worries li::before{content:"";position:absolute;left:22px;top:24px;width:20px;height:20px;border-radius:50%;border:2px solid var(--muted)}
+.worries li::after{content:"";position:absolute;left:30px;top:29px;width:4px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg)}
+.worries b{background:linear-gradient(transparent 68%,rgba(46,123,207,.2) 68%)}
+.worry-ans{text-align:center;margin:44px 0 0;font-size:clamp(20px,2.8vw,28px);font-weight:900;line-height:1.6}
+.worry-ans span{display:block;font-size:15px;font-weight:500;color:var(--muted)}
+.worry-ans b{color:var(--accent-ink)}
+.sp{display:none}
+/* cta band */
+.cta-band{margin-top:40px;display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;background:var(--navy);color:var(--paper);border-radius:20px;padding:28px 32px}
+.cta-band b{display:block;font-size:19px;line-height:1.5}
+.cta-band span{display:block;font-size:14px;color:#C9D6E6;margin-top:4px}
+/* assure */
+.assure{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.assure>div{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px 20px}
+.assure .mono{color:var(--accent-ink)}
+.assure h3{font-size:17px;margin:6px 0 8px;line-height:1.5}
+.assure p{margin:0;font-size:14px;color:var(--muted);line-height:1.75}
+.flow-note{margin:28px 0 0;padding:18px 22px;border:1px dashed var(--accent);border-radius:var(--r);background:#EAF3FC;font-size:15px}
+
+
+/* contact form */
+.form-wrap{max-width:640px;margin:44px auto 0;text-align:left;background:var(--paper);color:var(--ink);border-radius:20px;padding:32px}
+.form-lead{color:var(--ink-2)!important;font-size:15px;margin:0 0 22px!important}
+.cform{display:grid;gap:16px}
+.cform .f{display:grid;gap:6px}
+.cform .f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cform label{font-size:14px;font-weight:700}
+.cform label em,.cform label span{font-style:normal;font-size:11px;font-weight:700;margin-left:8px;padding:1px 7px;border-radius:4px}
+.cform label em{background:var(--accent-ink);color:#fff}
+.cform label span{background:#E4E1D9;color:var(--muted)}
+.cform input,.cform textarea{font:inherit;font-size:16px;width:100%;padding:12px 14px;border:1px solid #C9C5BB;border-radius:10px;background:#fff;color:var(--ink)}
+.cform textarea{resize:vertical;min-height:130px;line-height:1.7}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(46,123,207,.28)}
+.cform [aria-invalid="true"]{border-color:var(--accent-ink);background:#FFF6F2}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.privacy{font-size:12.5px;color:var(--muted)!important;margin:0!important}
+.btn-send{font:inherit;font-weight:700;font-size:16px;letter-spacing:.06em;min-height:54px;border:0;border-radius:999px;background:var(--navy);color:#fff;cursor:pointer;transition:background .15s}
+.btn-send:hover{background:var(--navy-d)}
+.btn-send:disabled{opacity:.6;cursor:wait}
+.form-status{margin:0!important;font-size:14px;font-weight:700;min-height:1.5em}
+.form-status.ok{color:var(--line-green-d)!important}
+.form-status.ng{color:var(--accent-ink)!important}
+
+
+/* concept */
+.concept{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.concept img{width:100%;border-radius:20px;aspect-ratio:654/202;object-fit:cover;box-shadow:0 24px 48px -32px rgba(13,59,102,.55)}
+.concept h2{font-family:var(--sans);font-size:clamp(22px,2.6vw,28px);line-height:1.6;font-weight:900;color:var(--navy);margin:10px 0 14px}
+.concept p{margin:0;color:var(--ink-2)}
+.concept .mono{color:var(--accent-ink)}
+.f-brand{display:flex;align-items:center;gap:12px;color:#fff}
+.f-brand .mark{height:28px;width:auto}
+.f-brand b{display:block;font-family:var(--en);font-weight:500;letter-spacing:.14em;font-size:16px;line-height:1.2}
+.f-brand small{display:block;font-size:11.5px;color:var(--sky);letter-spacing:.08em}
+footer .wrap{align-items:center}
+
+/* sticky mobile CTA */
+.mcta{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .nav{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .steps3{grid-template-columns:1fr}
+  .steps3 article,.steps3 article+article{padding:26px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .work{grid-template-columns:1fr;padding:24px;gap:28px}
+  .profile{grid-template-columns:1fr;gap:32px}
+  .concept{grid-template-columns:1fr;gap:24px}
+  .profile figure{max-width:340px}
+  .flow{grid-template-columns:1fr 1fr}
+  .assure{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:15.5px}
+  .hd .btn-line{display:none}
+  .hero{padding:36px 0 64px}
+  .lead{font-size:16px}
+  .hero-cta .btn-line{width:100%}
+  section{padding:72px 0}
+  .sec-hd{margin-bottom:32px}
+  .prices{grid-template-columns:1fr}
+  .price{padding:26px 22px}
+  .flow{grid-template-columns:1fr}
+  .worries,.assure{grid-template-columns:1fr}
+  .sp{display:inline}
+  .stats dd{font-size:22px}
+  .stats div{padding-left:12px}
+  .cta-band{padding:24px 20px}
+  .cta-band .btn-line{width:100%}
+  .form-wrap{padding:24px 18px;margin-top:36px}
+  .cform .f2{grid-template-columns:1fr}
+  .demo{grid-template-columns:150px 1fr;gap:18px}
+  .phone{border-width:8px;border-radius:28px}
+  .phone .scr{padding:16px 10px;gap:7px}
+  .sk.img{height:64px}
+  .phone .cta{height:32px;font-size:9.5px;left:8px;right:8px;bottom:10px}
+  .d1{top:36px}.d2{top:112px}.d3{bottom:16px}
+  .legend{gap:16px}.legend li{font-size:12.5px}.legend b{font-size:13.5px}
+  .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30;transform:translateY(140%);transition:transform .3s ease}
+  .mcta.show{transform:none}
+  .mcta .btn-line{width:100%;min-height:54px;box-shadow:0 10px 24px -8px rgba(0,0,0,.4)}
+  footer{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 .strike::after{transform:scaleX(1)}
+  .rv{opacity:1;transform:none}
+  .cursor{left:52%;top:89%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- LINEのURLは1か所（LINE_URL）でまとめて差し替えられるように data-line を付けています -->
+<header class="hd" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="KEI DESIGN トップへ">
+      <img src="img/logo-mark.png" width="238" height="170" alt="" class="mark">
+      <span><b>KEI DESIGN</b><small>WEB DESIGN &amp; SUPPORT</small></span>
+    </a>
+    <nav class="nav" aria-label="ページ内">
+      <a href="#approach">考え方</a><a href="#works">制作事例</a><a href="#price">料金</a><a href="#profile">つくる人</a><a href="#flow">流れ</a>
+    </nav>
+    <a class="btn-line" data-line href="#contact">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>
+      LINEで相談
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <span class="mono eyebrow">Homepage that moves people</span>
+      <h1 id="hero-title"><span class="strike">きれい</span>より、<br><span class="nw"><em>押される</em>ホームページを。</span></h1>
+      <p class="lead">電話をかける。LINEを送る。買う。<br>お客さんの「次の一手」が増えるように、見た目より先に、置き場所と順番を設計します。</p>
+      <div class="hero-cta">
+        <a class="btn-line lg" data-line href="#contact">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>
+          LINEで無料相談する
+        </a>
+        <p>相談・お見積りは無料です</p>
+      </div>
+      <dl class="stats">
+        <div><dt>制作費</dt><dd>19,800<small>円〜</small></dd></div>
+        <div><dt>更新代行</dt><dd>1,980<small>円／月</small></dd></div>
+        <div><dt>サーバー代</dt><dd>0<small>円</small><sup>※</sup></dd></div>
+      </dl>
+      <p class="stats-note">※ 無料の公開サービスを使う構成の場合。独自ドメインは別途。</p>
+    </div>
+
+    <div class="demo" aria-hidden="true">
+      <div class="phone">
+        <div class="scr">
+          <div class="sk t1"></div>
+          <div class="sk h" style="margin-top:14px"></div>
+          <div class="sk h2"></div>
+          <div class="sk p" style="margin-top:6px"></div><div class="sk p s"></div>
+          <div class="sk img"></div>
+          <div class="sk p"></div><div class="sk p s"></div>
+        </div>
+        <span class="dot d1">1</span><span class="dot d2">2</span><span class="dot d3">3</span>
+        <div class="cta">LINEで相談する</div>
+        <svg class="cursor" viewBox="0 0 24 24"><path d="M5 2l14 10.5-6.4 1.2 3.6 7.6-3 1.4-3.6-7.6L5 19.5z" fill="#0F2440" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <ol class="legend">
+        <li><i>1</i><span><b>3秒で伝わる見出し</b>何の店か、すぐわかる</span></li>
+        <li><i>2</i><span><b>写真は“安心”の材料</b>誰がやっているか見える</span></li>
+        <li><i>3</i><span><b>押すボタンは1つ</b>親指の届く位置に固定</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- WORRY -->
+<section id="worry" aria-labelledby="wr-title">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">01 — Worry</span>
+      <h2 id="wr-title">こんなこと、<br>思っていませんか？</h2>
+    </div>
+    <ul class="worries">
+      <li class="rv">ホームページは欲しいけど、<b>何十万円もかけられない</b></li>
+      <li class="rv">昔つくったけど、<b>問い合わせが一件も来ない</b></li>
+      <li class="rv">パソコンが苦手で、<b>何を用意すればいいかわからない</b></li>
+      <li class="rv">頼んだあと、<b>更新のたびにお金と手間がかかる</b>のが心配</li>
+    </ul>
+    <p class="worry-ans rv"><span>そのお悩み、</span><b>KEI DESIGN</b>なら<br class="sp">まとめて解決できます。</p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="dark" id="approach" aria-labelledby="ap-title">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">02 — Approach</span>
+      <h2 id="ap-title">見た目を整えるのは、<br>最後の仕上げです。</h2>
+      <p>おしゃれでも、問い合わせが来なければ意味がありません。つくる前に、まず「誰に・何をしてほしいか」を決めます。</p>
+    </div>
+    <div class="steps3">
+      <article class="rv">
+        <span class="num">/01</span>
+        <h3>してほしい行動を<br>ひとつに決める</h3>
+        <p>電話なのか、LINEなのか、来店なのか。ゴールが決まると、ページに置くもの・置かないものが決まります。</p>
+      </article>
+      <article class="rv">
+        <span class="num">/02</span>
+        <h3>スマホの親指で<br>迷わず押せる配置に</h3>
+        <p>見る人の多くはスマホです。ボタンの大きさ、位置、文字の順番まで、片手で操作する前提で組み立てます。</p>
+      </article>
+      <article class="rv">
+        <span class="num">/03</span>
+        <h3>迷わせる情報を<br>削る</h3>
+        <p>あれもこれも載せると、人は動けなくなります。伝えることを絞り、読む順番どおりに並べます。</p>
+      </article>
+    </div>
+<div class="code rv" aria-label="設計メモの例"><span class="c">// このページ自体も、同じ考え方でつくっています</span>
+<span class="k">goal</span>   = <span class="s">"LINEで相談してもらう"</span>
+<span class="k">button</span> = <span class="s">1種類だけ</span>  <span class="c">// 色も文言もそろえる</span>
+<span class="k">mobile</span> = <span class="s">画面下に固定</span> <span class="c">// スクロールしても押せる</span></div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works" aria-labelledby="wk-title">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">03 — Works</span>
+      <h2 id="wk-title">制作事例</h2>
+    </div>
+    <div class="work rv">
+      <div class="mini" aria-hidden="true">
+        <div class="bar"><span></span><span></span><span></span></div>
+        <div class="mh"><small>警備スタッフ募集中</small><strong>地元の安全を、<br>地元のあなたと。</strong><span class="tel">まずはお電話を</span></div>
+        <div class="mb"><div></div><div></div><div></div></div>
+      </div>
+      <div>
+        <span class="tag">警備会社</span><span class="tag">求人ページ</span><span class="tag">板野郡・阿波市</span>
+        <h3>合同会社HAセキュリティー 様<br>採用サイト</h3>
+        <dl>
+          <dt>GOAL</dt><dd>求人への応募の電話を増やす</dd>
+          <dt>DESIGN</dt><dd>電話番号を最初の画面と各所に配置し、ためらう人のために「話を聞くだけでもOK」とひとこと添えました。</dd>
+          <dt>TRUST</dt><dd>代表の人柄が伝わるメッセージで、「どんな人と働くか」がわかるように。</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="cta-band rv">
+      <div><b>あなたのお店の「押してほしいボタン」は何ですか？</b><span>電話・LINE・予約…まずはそこから一緒に考えます。</span></div>
+      <a class="btn-line" data-line href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>LINEで無料相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" aria-labelledby="pr-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">04 — Price</span>
+      <h2 id="pr-title">料金</h2>
+      <p>はじめてのホームページでも始めやすいよう、最安値クラスの価格にしています。金額は必ず事前にお伝えし、納得いただいてから作り始めます。</p>
+    </div>
+    <div class="prices">
+      <div class="price main rv">
+        <h3>1ページサイト制作</h3>
+        <div class="amt">19,800<small>円〜</small></div>
+        <p class="sub">お店や会社の情報を、1ページにわかりやすくまとめます。</p>
+        <ul>
+          <li>スマホでも見やすいデザイン</li>
+          <li>電話・LINEボタンの設置</li>
+          <li>文章づくりのお手伝い</li>
+          <li>公開作業まで</li>
+        </ul>
+      </div>
+      <div class="price rv">
+        <h3>更新代行</h3>
+        <div class="amt">1,980<small>円／月</small></div>
+        <p class="sub">「営業日が変わった」「写真を変えたい」など、LINEで送るだけ。</p>
+        <ul>
+          <li>文章・写真の差し替え</li>
+          <li>お知らせの追加</li>
+          <li>対応回数：<span class="ph">[月◯回まで]</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="price-note">※ 価格はすべて税込です。</p>
+  </div>
+</section>
+
+
+<!-- ASSURANCE -->
+<section id="assure" aria-labelledby="as-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">05 — Promise</span>
+      <h2 id="as-title">はじめてでも安心の、<br>4つの約束</h2>
+    </div>
+    <div class="assure">
+      <div class="rv"><span class="mono">01</span><h3>相談・見積りは無料</h3><p>話を聞くだけでも大丈夫です。無理な売り込みはしません。</p></div>
+      <div class="rv"><span class="mono">02</span><h3>金額に納得してから</h3><p>作り始める前に、内容と金額をはっきりお伝えします。ご了承なく追加費用がかかることはありません。</p></div>
+      <div class="rv"><span class="mono">03</span><h3>作業はLINEで送るだけ</h3><p>文章や写真はスマホから送るだけ。難しい準備はいりません。</p></div>
+      <div class="rv"><span class="mono">04</span><h3>公開後も相談できる</h3><p>公開して終わりにしません。直したいところは、いつでもLINEで。</p></div>
+    </div>
+    <div class="cta-band rv">
+      <div><b>まずは、見積りだけでもどうぞ。</b><span>「うちだといくら？」の一言で大丈夫です。</span></div>
+      <a class="btn-line" data-line href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>LINEで無料相談する</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONCEPT -->
+<section class="concept-sec" aria-labelledby="cc-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="concept rv">
+      <img src="img/tokushima-sea.jpg" width="654" height="202" alt="徳島から、あなたの想いをWebで。（大鳴門橋と鳴門海峡の風景）" loading="lazy" decoding="async">
+      <div>
+        <span class="mono">Concept</span>
+        <h2 id="cc-title">つながる、ひろがる、<br>あなたの未来。</h2>
+        <p>徳島の小さな会社やお店の想いを、Webの力でカタチにする。シンプルで、見やすく、伝わるデザインで、あなたのビジネスに寄り添います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile" aria-labelledby="pf-title" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">06 — Profile</span>
+      <h2 id="pf-title">つくる人</h2>
+    </div>
+    <div class="profile">
+      <figure class="rv">
+        <img src="img/masuda.jpg" width="720" height="959" alt="KEI DESIGN 代表 増田 圭亮" loading="lazy" decoding="async">
+        <figcaption>徳島市川内町</figcaption>
+      </figure>
+      <div class="rv">
+        <blockquote>ホームページは、<br>飾りではなく「道具」だと思っています。</blockquote>
+        <p>はじめまして、KEI DESIGNの増田です。</p>
+        <p>きれいなホームページは、今は誰でもつくれます。でも、見た人が電話をかけたり、ボタンを押して買ったりしなければ、お店にとっては何も変わりません。</p>
+        <p>だから私は、つくる前にまず「このページを見た人に、何をしてほしいですか？」とお聞きします。そこから逆算して、ことば・写真・ボタンの位置を決めていきます。</p>
+        <p>パソコンが苦手な方も大丈夫です。まずはLINEで、気軽にご相談ください。</p>
+        <div class="sign"><span>KEI DESIGN 代表</span><b>増田 圭亮</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow" aria-labelledby="fl-title">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">07 — Flow</span>
+      <h2 id="fl-title">ご相談から公開まで</h2>
+    </div>
+    <ol class="flow">
+      <li class="rv"><span class="mono">Step 01</span><h3>LINEで相談</h3><p>「こんなことできる？」だけでも大丈夫です。</p></li>
+      <li class="rv"><span class="mono">Step 02</span><h3>お話を聞く</h3><p>お店のこと、来てほしいお客さんのことを伺います。</p></li>
+      <li class="rv"><span class="mono">Step 03</span><h3>お見積り</h3><p>内容と金額を確認いただいてから進めます。</p></li>
+      <li class="rv"><span class="mono">Step 04</span><h3>制作・確認</h3><p>スマホで見ながら、一緒に仕上げていきます。</p></li>
+      <li class="rv"><span class="mono">Step 05</span><h3>公開</h3><p>公開後の更新もおまかせいただけます。</p></li>
+    </ol>
+    <p class="flow-note rv">お客さまにしていただくのは、<b>LINEで話すことと、写真・文章を送ることだけ</b>。あとはすべてこちらで進めます。</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section aria-labelledby="fq-title" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-hd rv">
+      <span class="mono">08 — FAQ</span>
+      <h2 id="fq-title">よくある質問</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary>どうしてこの価格でできるのですか？</summary>
+        <p>営業担当や外注を通さず、増田がひとりで直接お話しして制作するからです。また、ページを1枚に絞り、維持費のかからない公開の仕組みを使うことで、品質を落とさずに価格を抑えています。</p>
+      </details>
+      <details>
+        <summary>サーバー代などの維持費はかかりますか？</summary>
+        <p>無料で使える公開サービス（Cloudflare Pages）を使う構成なら、サーバー代はかかりません。独自のドメイン（○○.com など）を使いたい場合は、ドメイン代だけ別途かかります。</p>
+      </details>
+      <details>
+        <summary>パソコンが苦手でも頼めますか？</summary>
+        <p>はい。文章や写真はLINEで送っていただければ大丈夫です。必要なことは、こちらから順番にお聞きします。</p>
+      </details>
+      <details>
+        <summary>文章が思いつきません。</summary>
+        <p>お話を伺いながら、こちらで文章の案をつくります。「普段お客さんにどう説明しているか」を教えていただくのが一番の材料になります。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="dark contact" id="contact" aria-labelledby="ct-title">
+  <div class="wrap">
+    <span class="mono" style="color:var(--sky)">09 — Contact</span>
+    <h2 id="ct-title">まずは、話すところから。</h2>
+    <p>相談・お見積りは無料です。売り込みはしません。</p>
+    <a class="btn-line lg" data-line href="#contact">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>
+      LINEで無料相談する
+    </a>
+    <div class="form-wrap">
+      <p class="form-lead">LINEを使っていない方は、こちらのフォームからどうぞ。<br>内容を確認して、メールでお返事します。</p>
+      <form id="cform" class="cform" novalidate>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="f"><label for="f-name">お名前<em>必須</em></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="f"><label for="f-email">メールアドレス<em>必須</em></label><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+        <div class="f2">
+          <div class="f"><label for="f-tel">電話番号<span>任意</span></label><input id="f-tel" name="phone" type="tel" autocomplete="tel" inputmode="tel"></div>
+          <div class="f"><label for="f-shop">お店・会社名<span>任意</span></label><input id="f-shop" name="shop" type="text" autocomplete="organization"></div>
+        </div>
+        <div class="f"><label for="f-msg">ご相談内容<em>必須</em></label><textarea id="f-msg" name="message" rows="5" required placeholder="例）美容室のホームページを作りたい。予算は2万円くらい。"></textarea></div>
+        <p class="privacy">いただいた情報は、ご相談へのお返事のためだけに使います。</p>
+        <button type="submit" class="btn-send">送信する</button>
+        <p class="form-status" id="fstatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="meta">KEI DESIGN ／ 代表 増田 圭亮 ／ 徳島市川内町</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand"><img src="img/logo-mark-white.png" width="238" height="170" alt="" class="mark"><span><b>KEI DESIGN</b><small>つながる、ひろがる、あなたの未来。</small></span></div>
+    <span class="f-copy">© <span id="yr">2026</span> KEI DESIGN ／ 徳島のホームページ制作・更新代行</span>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta">
+  <a class="btn-line" data-line href="#contact">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5 1.1-.5 5.9-3.5 8-6C21.4 14.4 22 12.8 22 11.1 22 6.6 17.5 3 12 3z"/></svg>
+    LINEで無料相談する
+  </a>
+</div>
+
+<script>
+// ▼ LINE公式アカウントのURLをここに入れると、ページ内のLINEボタンすべてに反映されます
+const LINE_URL = ""; // 例: "https://lin.ee/xxxxxxx"
+
+(function(){
+  if (LINE_URL) document.querySelectorAll('[data-line]').forEach(a=>{a.href=LINE_URL;a.target="_blank";a.rel="noopener"});
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const hd = document.querySelector('.hd'), m = document.getElementById('mcta'), hero = document.querySelector('.hero'), ct = document.getElementById('contact');
+  let heroOut = false, ctIn = false;
+  const upd = () => m.classList.toggle('show', heroOut && !ctIn);
+  addEventListener('scroll', () => hd.classList.toggle('is-scrolled', scrollY > 8), {passive:true});
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(e=>{heroOut=!e[0].isIntersecting;upd()}).observe(hero);
+    new IntersectionObserver(e=>{ctIn=e[0].isIntersecting;upd()}).observe(ct);
+    const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  } else {
+    document.querySelectorAll('.rv').forEach(el=>el.classList.add('in'));
+  }
+})();
+
+// ▼ Web3Forms のアクセスキー（受け取り先のメールアドレスはページに出ません）
+const WEB3FORMS_KEY = "c406bd58-e7d1-427f-9b69-5eed4127a510"; // 例: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+(function(){
+  const f = document.getElementById('cform'); if(!f) return;
+  const st = document.getElementById('fstatus'), btn = f.querySelector('.btn-send');
+  const say = (msg, cls) => { st.textContent = msg; st.className = 'form-status ' + (cls||''); };
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    let bad = null;
+    f.querySelectorAll('[required]').forEach(el => { const ng = !el.value.trim() || (el.type==='email' && !el.checkValidity()); el.setAttribute('aria-invalid', ng); if(ng && !bad) bad = el; });
+    if (bad) { say('入力されていない項目があります。', 'ng'); bad.focus(); return; }
+    if (!WEB3FORMS_KEY) { say('フォームは準備中です。お手数ですがLINEからご連絡ください。', 'ng'); return; }
+    const d = Object.fromEntries(new FormData(f));
+    if (d.botcheck) return;
+    btn.disabled = true; say('送信しています…');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {method:'POST', headers:{'Content-Type':'application/json',Accept:'application/json'},
+        body: JSON.stringify({access_key:WEB3FORMS_KEY, subject:'【KEI DESIGN】ホームページからのお問い合わせ', from_name:'KEI DESIGN ホームページ', botcheck:false,
+          'お名前':d.name, email:d.email, '電話番号':d.phone||'-', 'お店・会社名':d.shop||'-', 'ご相談内容':d.message})});
+      const j = await res.json();
+      if (j.success) { f.reset(); say('送信しました。内容を確認して、メールでお返事します。', 'ok'); }
+      else throw 0;
+    } catch(_) { say('送信できませんでした。時間をおいて試すか、LINEからご連絡ください。', 'ng'); }
+    btn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>
